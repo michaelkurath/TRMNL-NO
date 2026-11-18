@@ -1,0 +1,15 @@
+---
+name: 'NO.'
+strategy: polling
+refresh_interval: 1440
+polling_url: https://naas.isalman.dev/no
+polling_headers: ''
+polling_verb: GET
+no_screen_padding: 'yes'
+dark_mode: 'no'
+custom_fields:
+  - keyname: author_bio
+    name: 'A fresh reason to say no.'
+    field_type: author_bio
+    description: 'One deadpan refusal at a time. Random reasons from No-as-a-Service.'
+    github_url: https://github.com/hotheadhacker/no-as-a-service

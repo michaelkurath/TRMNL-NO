@@ -1,0 +1,102 @@
+<style>
+  .no-poster {
+    width: 100%;
+    height: 100%;
+    container-type: size;
+    background: #fff;
+    color: #121212;
+    text-align: center;
+    font-family: Inter, Arial, sans-serif;
+  }
+
+  .no-poster--color,
+  .screen--frame .no-poster {
+    background: #fff4da;
+    --no-accent: #b60000;
+  }
+
+  .no-poster__content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4cqmin;
+    width: 100%;
+    height: 100%;
+    padding: 7cqmin;
+  }
+
+  .no-poster__wordmark {
+    flex: none;
+    margin: 0;
+    color: var(--no-accent, currentColor);
+    font-weight: 900;
+    font-size: min(31cqmin, 45cqw);
+    line-height: .84;
+    letter-spacing: -.065em;
+  }
+
+  .no-poster__reason {
+    max-width: 30ch;
+    min-width: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: min(9.4cqmin, 6cqw);
+    line-height: 1.17;
+    overflow-wrap: anywhere;
+    text-wrap: pretty;
+  }
+
+  .no-poster--medium .no-poster__reason {
+    font-size: min(8cqmin, 5.3cqw);
+  }
+
+  .no-poster--long .no-poster__reason {
+    font-size: min(6.8cqmin, 4.6cqw);
+    max-width: 36ch;
+  }
+
+  .no-poster--quadrant .no-poster__wordmark {
+    font-size: 24cqmin;
+  }
+
+  @container (min-aspect-ratio: 5/2) {
+    .no-poster--half-horizontal .no-poster__content {
+      flex-direction: row;
+      gap: 11cqh;
+      text-align: left;
+    }
+
+    .no-poster--half-horizontal .no-poster__wordmark {
+      font-size: 46cqh;
+    }
+
+    .no-poster--half-horizontal .no-poster__reason {
+      max-width: 36ch;
+    }
+  }
+</style>
+{% template no_poster %}
+  {% assign refusal = reason | strip_html | strip | default: "I've checked my calendar. That time is reserved for doing less." %}
+  {% assign refusal_length = refusal | size %}
+  {% assign screen_width = device.width | plus: 0 %}
+  {% assign screen_height = device.height | plus: 0 %}
+  {% assign screen_key = device.model | downcase %}
+  {% assign color = false %}
+  {% if screen_key == 'frame' or screen_key == 'trmnl frame' %}
+    {% assign color = true %}
+  {% elsif screen_width == 2560 and screen_height == 1440 %}
+    {% assign color = true %}
+  {% elsif screen_width == 1440 and screen_height == 2560 %}
+    {% assign color = true %}
+  {% endif %}
+  <div class="layout">
+    <article class="no-poster no-poster--{{ layout }}{% if color %} no-poster--color{% endif %}{% if refusal_length > 125 %} no-poster--long{% elsif refusal_length > 72 %} no-poster--medium{% endif %}">
+      <div class="no-poster__content">
+        <div class="no-poster__wordmark">NO.</div>
+        <p class="no-poster__reason">{{ refusal | truncate: 220 | escape }}</p>
+      </div>
+    </article>
+  </div>
+{% endtemplate %}
