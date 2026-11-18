@@ -1,8 +1,8 @@
 # NO.
 
-A fresh reason to say no. A TRMNL plugin that displays one deadpan refusal per day from [No-as-a-Service](https://github.com/hotheadhacker/no-as-a-service).
+A fresh reason to say no. This TRMNL plugin displays one deadpan refusal per day. It rotates through 22 short lines curated from [No-as-a-Service](https://github.com/hotheadhacker/no-as-a-service) and uses the UTC date to keep the wording stable across views and refreshes.
 
-Frame uses red on cream. OG and X use a high-contrast monochrome layout. The plugin supports full, half-horizontal, half-vertical, and quadrant views.
+Frame uses red on cream. OG and X use high-contrast monochrome. There are full, half-horizontal, half-vertical, and quadrant views.
 
 ## Install as a private plugin
 
@@ -15,4 +15,5 @@ Frame uses red on cream. OG and X use a high-contrast monochrome layout. The plu
    ```
 
 3. Open [Private Plugins](https://trmnl.com/plugin_settings?keyname=private_plugin), select **Import new**, and choose `TRMNL_NO.zip`.
-4. Use **Force Refresh** to check the feed.
+
+The bundled text is available under the [upstream MIT license](LICENSE-No-as-a-Service).
