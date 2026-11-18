@@ -124,7 +124,13 @@ SOFTWARE.
     <article class="no-poster no-poster--{{ layout }}{% if color %} no-poster--color{% endif %}{% if refusal_length > 125 %} no-poster--long{% elsif refusal_length > 72 %} no-poster--medium{% endif %}">
       <div class="no-poster__content">
         <div class="no-poster__wordmark">NO.</div>
+        {% if color == false and layout == 'half-vertical' %}
+        <p class="title title--large text--bold lg:title--xxlarge">{{ refusal | truncate: 220 | escape }}</p>
+        {% elsif color == false and layout == 'quadrant' %}
+        <p class="title title--base text--bold lg:title--xlarge">{{ refusal | truncate: 220 | escape }}</p>
+        {% else %}
         <p class="no-poster__reason">{{ refusal | truncate: 220 | escape }}</p>
+        {% endif %}
       </div>
     </article>
   </div>
