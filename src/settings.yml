@@ -1,17 +1,26 @@
 ---
-name: 'NO.'
 strategy: polling
-refresh_interval: 1440
-polling_url: https://naas.api.nixie.online/no
-polling_headers: ''
-polling_verb: GET
 no_screen_padding: 'yes'
 dark_mode: 'no'
+static_data: '{"reasons":["Every time I think about it, I hear a tiny ‘nope’ in the wind.","My future self wrote me a note: ‘Please don’t do this again.’","I''d love to say yes, but I just made a commitment to do less questionable things this week.","I have to trust my gut—and it''s gently suggesting a no.","Saying no to this helps me say yes to something that matters more to me.","I don’t hate the idea—but I also don’t want to do it.","I’ve made peace with declining things that don’t energize me.","Even my calendar laughed when I tried to squeeze this in.","This feels like something Future Me would yell at Present Me for agreeing to.","I’ve tried doing too much before, and this feels like déjà vu.","This is a great idea—for someone else to take on.","The version of me who says yes to this doesn’t exist anymore.","Even my coffee said, ‘Not today.’","My inner peace committee vetoed this idea unanimously.","I had a vision of doing this—and then promptly fell asleep in it.","Mentally, I’ve already left the room where this would happen.","If I took this on, I’d be betraying the time I promised myself.","I once made a similar decision and my cat hasn’t looked me in the eye since. Let’s not repeat history.","If I agree, I’d need to clone myself. And I don''t trust him.","I''d rather say no with honesty than yes with resentment.","It’s not a no forever, but it’s a no for now.","My enthusiasm is sincere, but my availability is imaginary."]}'
+polling_verb: get
+framework_version: 3.4.6
+serverless_language: ''
+refresh_interval_floor: '60'
+polling_url: https://naas.api.nixie.online/no
+polling_headers: ''
+polling_body: ''
+id: 545082
+oauth_enabled: 'false'
+oauth_pkce_enabled: 'no'
 custom_fields:
-  - keyname: author_bio
-    name: 'A fresh reason to say no.'
-    field_type: author_bio
-    category: humor
-    description: 'One deadpan refusal at a time. Powered by the No-as-a-Service community mirror.'
-    github_url: https://github.com/michaelkurath/TRMNL-NO
-    learn_more_url: https://github.com/hotheadhacker/no-as-a-service
+- keyname: author_bio
+  name: A fresh reason to say no.
+  field_type: author_bio
+  category: humor
+  description: One deadpan refusal at a time. Powered by the No-as-a-Service community mirror.
+  github_url: https://github.com/michaelkurath/TRMNL-NO
+  learn_more_url: https://github.com/hotheadhacker/no-as-a-service
+name: NO.
+description: A fresh reason to say no.
+refresh_interval: 1440
