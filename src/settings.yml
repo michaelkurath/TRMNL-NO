@@ -7,7 +7,7 @@ polling_verb: get
 framework_version: 3.4.6
 serverless_language: ''
 refresh_interval_floor: '60'
-polling_url: https://naas.api.nixie.online/no
+polling_url: https://noasaservice.lol/api/get
 polling_headers: ''
 polling_body: ''
 id: 545082
@@ -18,9 +18,9 @@ custom_fields:
   name: A fresh reason to say no.
   field_type: author_bio
   category: humor
-  description: One deadpan refusal at a time. Powered by the No-as-a-Service community mirror.
+  description: One deadpan refusal at a time. Powered by noasaservice.lol.
   github_url: https://github.com/michaelkurath/TRMNL-NO
-  learn_more_url: https://github.com/hotheadhacker/no-as-a-service
+  learn_more_url: https://noasaservice.lol/
 name: NO.
 description: A fresh reason to say no.
 refresh_interval: 1440

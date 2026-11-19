@@ -22,6 +22,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 {% endcomment %}
+{% if reason == blank %}
+  {% assign reason = message %}
+{% endif %}
 {% if reason == blank and reasons.size > 0 %}
   {% assign day_number = 'now' | date: '%s' | plus: 0 | divided_by: 86400 %}
   {% assign reason_index = day_number | modulo: reasons.size %}
