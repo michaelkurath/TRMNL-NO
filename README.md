@@ -2,7 +2,7 @@
 
 A fresh reason to say no. This TRMNL plugin displays one deadpan refusal per day. It polls [noasaservice.lol](https://noasaservice.lol/api/get) once per day and displays the JSON `message` field. The template also accepts `reason` from older feeds.
 
-Frame uses red on cream. OG and X use high-contrast monochrome. There are full, half-horizontal, half-vertical, and quadrant views.
+Frame uses red on cream. OG B/W/R/Y uses a red wordmark and yellow underline. Monochrome OG and X use high-contrast monochrome. There are full, half-horizontal, half-vertical, and quadrant views.
 
 ## Install as a private plugin
 
