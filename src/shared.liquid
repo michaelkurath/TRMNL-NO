@@ -47,6 +47,22 @@ SOFTWARE.
     --no-accent: #b60000;
   }
 
+  .screen--og.screen--color-4bwry .no-poster {
+    --no-accent: #f00;
+  }
+
+  .screen--og.screen--color-4bwry .no-poster__wordmark {
+    position: relative;
+  }
+
+  .screen--og.screen--color-4bwry .no-poster__wordmark::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 -.09em;
+    height: .055em;
+    background: #ff0;
+  }
+
   .no-poster__content {
     box-sizing: border-box;
     display: flex;
